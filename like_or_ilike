@@ -1,0 +1,3 @@
+SELECT * FROM teachers
+        
+WHERE teachers.name ILIKE '%nal%' // ILIKE or LIKE return data that contains part of the string between %%
