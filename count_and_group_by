@@ -1,0 +1,9 @@
+SELECT teachers.id, teachers.name, teachers.avatar_url, teachers.subjects_taught, COUNT(students) AS total_students // COUNT counts total students in students table
+        
+        FROM teachers
+        
+        LEFT JOIN students ON (students.teacher_id = teachers.id) // JOIN under a condition
+        
+        GROUP BY teachers.id // GROUP BY groups teachers with same id 
+        
+        ORDER BY teachers.id ASC
