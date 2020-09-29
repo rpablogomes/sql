@@ -1,0 +1,8 @@
+SELECT students.id, students.avatar_url, students.name, students.email,  students.school_year, teachers.name as teacher_name 
+// SELECT columns from students table and teachers_name from teachers table 
+            
+FROM students
+            
+LEFT JOIN teachers ON (students.teacher_id = teachers.id) LEFT JOIN teachers.name as teacher_name under condition (students.teacher_id = teachers.id)
+            
+ORDER BY students ASC
