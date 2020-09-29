@@ -3,6 +3,6 @@ SELECT students.id, students.avatar_url, students.name, students.email,  student
             
 FROM students
             
-LEFT JOIN teachers ON (students.teacher_id = teachers.id) LEFT JOIN teachers.name as teacher_name under condition (students.teacher_id = teachers.id)
+LEFT JOIN teachers ON (students.teacher_id = teachers.id) // LEFT JOIN teachers.name as teacher_name under condition (students.teacher_id = teachers.id)
             
 ORDER BY students ASC
