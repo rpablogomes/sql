@@ -1,0 +1,9 @@
+SELECT teachers.id, teachers.name, teachers.avatar_url, teachers.subjects_taught, COUNT(students) AS total_students
+        
+      FROM teachers
+      
+      LEFT JOIN students ON (students.teacher_id = teachers.id)
+      
+      GROUP BY teachers.id
+      
+      LIMIT 2 OFFSET 0 // LIMIT of returned rows on a especific position (OFFSET) on table.
